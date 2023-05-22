@@ -6,7 +6,7 @@ package com.dylan.chatgpttest;
  * desc:
  */
 public class JavaTest {
-    public void javaTest(){
-        System.out.println("JavaTest:print log");
+    public String javaTest(int index) {
+        return "JavaTest:print log,index:" + index + "\n";
     }
 }
