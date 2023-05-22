@@ -6,7 +6,7 @@ package com.dylan.chatgpttest
  * desc: 这是一个kotlin测试文件
  */
 class KotlinTest {
-    fun kotlinTest(index: Int) {
-        println("KotlinTest:print log,index:$index")
+    fun kotlinTest(index: Int): String {
+        return "KotlinTest:print log,index:$index\n"
     }
 }

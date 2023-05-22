@@ -14,12 +14,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        binding.textViewTv.setOnClickListener {
+        binding.printMb.setOnClickListener {
             when (LogType.pause(logValue)) {
-                LogType.KOTLIN_LOG -> kotlinTest.kotlinTest(logValue)
-                LogType.JAVA_LOG -> javaTest.javaTest(logValue)
+                LogType.KOTLIN_LOG -> binding.content += kotlinTest.kotlinTest(logValue)
+                LogType.JAVA_LOG -> binding.content += javaTest.javaTest(logValue)
             }
             logValue++
+            binding.textViewTv.let { binding.scrollViewSv.smoothScrollTo(it.x.toInt(), it.y.toInt() + it.height) }
         }
     }
 }
