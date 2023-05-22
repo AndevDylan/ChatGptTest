@@ -7,6 +7,6 @@ package com.dylan.chatgpttest
  */
 class KotlinTest {
     fun kotlinTest() {
-        println("print log")
+        println("KotlinTest:print log")
     }
 }
