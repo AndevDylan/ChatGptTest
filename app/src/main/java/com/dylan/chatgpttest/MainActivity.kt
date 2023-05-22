@@ -12,8 +12,8 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         binding.textViewTv.setOnClickListener {
-            KotlinTest().kotlinTest()
-            JavaTest().javaTest()
+//            KotlinTest().kotlinTest()
+//            JavaTest().javaTest()
         }
     }
 }
