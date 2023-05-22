@@ -6,4 +6,7 @@ package com.dylan.chatgpttest
  * desc: 这是一个kotlin测试文件
  */
 class KotlinTest {
+    fun kotlinTest() {
+        println("print log")
+    }
 }
