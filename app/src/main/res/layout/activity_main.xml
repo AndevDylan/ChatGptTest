@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:padding="18dp"
-                android:text="@{content.toString()}" />
+                android:text="@{content}" />
         </ScrollView>
 
         <com.google.android.material.button.MaterialButton
