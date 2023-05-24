@@ -1,19 +1,25 @@
-#name: Code Review
-#
-#permissions:
-#  contents: read
-#  pull-requests: write
-#
-#on:
-#  pull_request:
-#    types: [opened, reopened]
-#
-#jobs:
-#  test:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: anc95/ChatGPT-CodeReview@main
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-#          LANGUAGE: Chinese
+name: Code Review
+
+permissions:
+  contents: read
+  pull-requests: write
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: anc95/ChatGPT-CodeReview@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          LANGUAGE: Chinese
+
+
+#支持说明
+#支持GitHub仓库的两种方式：1.GitHub App；2.workflow；
+#支持coding的方式：无；
+#支持本地服务器的方式：暂时不确定是否支持。
